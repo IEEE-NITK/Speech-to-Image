@@ -1,1 +1,1 @@
-# Speech-to-Image-without-text
+# Speech-to-Image
