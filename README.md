@@ -1,6 +1,43 @@
-# Speech_to_Image
+# Speech-to-Image
 
-## Synthesizing high-quality images from text descriptions
+<details>
+  <summary>Table of Contents</summary>
+    <ol>
+        <li>
+            <a href="#Introduction">Introduction</a>
+        </li>
+        <li>
+          <a href="#Step-1 Speech to Text">Speech to Text</a>
+	  <ul>
+                <li><a href="##Transformer Model Architecture">Transformer Architecture</a></li>
+          </ul>
+        </li>
+        <li>
+            <a href="#Step-2 Text to Image">Text to Image</a>
+            <ul>
+                <li><a href="#About Dataset">Dataset</a></li>
+                <li><a href="#Text Embedding Model">Text Embedding Model</a></li>
+		<li><a href="## Architecture">Architecture</a></li>
+            </ul>	
+        </li>
+        <li>
+            <a href="#### References">References</a> 
+        </li> 
+    </ol>
+</details>
+
+# Introduction
+In this project we attempt to translate the speech signals into image signals in two steps. The speech signal is converted into text with the help of Automatic speech recognition (ASR) and then high-quality images are generated from the text descriptions by using StackGAN.
+
+# Step-1 Speech to Text
+Automatic speech recognition (ASR) consists of transcribing audio speech segments into text. ASR can be treated as a sequence-to-sequence problem, where the audio can be represented as a sequence of feature vectors and the text as a sequence of characters, words, or subword tokens.
+
+The Dataset we are using is the [<b>LJSpeech dataset</b>](https://keithito.com/LJ-Speech-Dataset/) from the LibriVox project. It consists of short audio clips of a single speaker reading passages from 7 non-fiction books. Our model is similar to the original Transformer (both encoder and decoder) as proposed in the paper,[<b> "Attention is All You Need"</b>](https://papers.nips.cc/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf).
+
+## Transformer Model Architecture
+<img src="./Images/Transformer_Architecture.png" width="428px" height="521px"/>
+
+# Step-2 Text to Image
 
 
 ### Create 3 folders (test, weights,results_stage2) in your current working directory.
@@ -46,6 +83,9 @@ Download char-CNN-RNN text embeddings for birds from : https://github.com/hanzha
 	- Outputs a 256x256 image
 
 ---
-#### Reference Papers
-1. **StackGAN: Text to photo-realistic image synthesis** [[Arxiv Link](https://arxiv.org/pdf/1612.03242.pdf)]
+#### References
+1. <b>Attention is All You Need</b> [[Arxiv Link](https://arxiv.org/abs/1706.03762)]
+2. <b>Very Deep Self-Attention Networks for End-to-End Speech Recognition</b> [[Arxiv Link](https://arxiv.org/pdf/1904.13377.pdf)]
+3. <b>Speech-Transformer</b> [[IEEE Xplore](https://ieeexplore.ieee.org/document/8462506)]
+4. **StackGAN: Text to photo-realistic image synthesis** [[Arxiv Link](https://arxiv.org/pdf/1612.03242.pdf)]
 ---
